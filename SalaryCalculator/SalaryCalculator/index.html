@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SalaryCalculator</title>
+
+    <!-- SalaryCalculator references -->
+    <link href="css/index.css" rel="stylesheet" />
+
+    <style>
+        .Bold{font-weight: bold}
+    </style>
+    
+</head>
+<body>
+    <h3>Monthly Nett Salary Calculator</h3>
+    <table>
+        <tr>
+            <td >Total Cost</td>
+            <td><input id="TotalCost" type="text" onchange="TotalCostChanged()" /></td>
+        </tr>
+        <tr>
+            <td>Provident Fund Contribution (%)</td>
+            <td><input id="ProvidentFundContribution" type="text" onchange="ProvidentFundContributionChanged()" value="15" /></td>
+        </tr>
+        <tr>
+            <td>Provident Fund</td>
+            <td><label id="ProvidentFund" /></td>
+        </tr>
+        <tr>
+            <td class="Bold">Basic Salary</td>
+            <td><label class="Bold" id="BasicSalary" /></td>
+        </tr>
+        <tr>
+            <td></br></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>TAX</td>
+            <td><input id="Tax" type="text" onchange="TaxChanged()" value="0" /></td>
+        </tr>
+        <tr>
+            <td>Uif</td>
+            <td><input id="Uif" type="text" onchange="UifChanged()" value="148.72" /></td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td><input id="Lunch" type="text" onchange="LunchChanged()" value="430" /></td>
+        </tr>
+        <tr>
+            <td class="Bold">NETT</td>
+            <td><label class="Bold" id="NettSalary" value="0" /></td>
+        </tr>
+    </table>
+
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
