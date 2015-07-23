@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <h1>Brian's Website</h1>
+    <h1>HOME</h1>
+    <div class="col-lg-12">
+        HomeController.About
+        @Html.ActionLink("Press me!", "About")
+    </div>
+    <div class="col-lg-12">
+        AccountController.ResetPasswordConfirmation
+        @Html.ActionLink("Press me!", "ResetPasswordConfirmation", "Account");
+
+    </div>
+</div>

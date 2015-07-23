@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularProject", "AngularProject\AngularProject.csproj", "{85A91AFD-5F26-4792-941F-37F829A38CC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularRoutingProject", "AngularRoutingProject\AngularRoutingProject.csproj", "{752E0555-161E-40C7-8141-00C38AECF56F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularMvcProject", "AngularMvcProject\AngularMvcProject.csproj", "{EF695336-35D9-4D67-B2D7-B65606A082B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{85A91AFD-5F26-4792-941F-37F829A38CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85A91AFD-5F26-4792-941F-37F829A38CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85A91AFD-5F26-4792-941F-37F829A38CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{752E0555-161E-40C7-8141-00C38AECF56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752E0555-161E-40C7-8141-00C38AECF56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752E0555-161E-40C7-8141-00C38AECF56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752E0555-161E-40C7-8141-00C38AECF56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF695336-35D9-4D67-B2D7-B65606A082B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF695336-35D9-4D67-B2D7-B65606A082B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF695336-35D9-4D67-B2D7-B65606A082B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF695336-35D9-4D67-B2D7-B65606A082B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
