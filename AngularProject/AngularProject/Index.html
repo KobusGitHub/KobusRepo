@@ -3,34 +3,98 @@
 <head>
     <title></title>
     <link href="Content/bootstrap.min.css" rel="stylesheet"/>
+   
 </head>
 <body data-ng-controller="homePageViewModel">
 <h1>{{ headingCaption }}</h1>
-<table class="table table-hover">
-    <thead>
-    <tr>
-        <td></td>
-        <td>FirstName</td>
-        <td>LastName</td>
-    </tr>
-    </thead>
-    <tbody ng-repeat="p in people">
-    <tr>
-        <td>
-            <a href="#" ng-click="showPerson(p)">select</a>
-        </td>
-        <td>
-            {{p.FirstName}}
-        </td>
-        <td>
-            {{p.LastName}}
-        </td>
-    </tr>
-    </tbody>
-</table>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <td></td>
+                        <td>FirstName</td>
+                        <td>LastName</td>
+                    </tr>
+                    </thead>
+                    <tbody ng-repeat="p in people">
+                    <tr>
+                        <td>
+                            <a href="#" ng-click="showPerson(p)">select</a>
+                        </td>
+                        <td>
+                            {{p.FirstName}}
+                        </td>
+                        <td>
+                            {{p.LastName}}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">Action</div>
+            <div class="col-md-1">FirstName</div>
+            <div class="col-md-1">LastName</div>
+        </div>
+        <div class="row" ng-repeat="p in people">
+            <div class="col-md-1">
+                <a href="#" ng-click="showPerson(p)">Select</a>
+            </div>
+            <div class="col-md-1">{{p.FirstName}}</div>
+            <div class="col-md-1">{{p.LastName}}</div>
+        </div>
+<br>
+    <div class="col-md-4">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="exampleInputName2" class="col-md-2 control-label"><abbr title="Name will be populated when grid row is selected">Name</abbr></label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Name" value="{{ selectedPerson.FirstName }}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2" class="col-md-2 control-label">Email</label>
+                <div class="col-md-10">
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+
+            </div>
+            <div>
+                <button type="submit" class="btn btn-default" ng-click="sendInvite(selectedPerson)">Send invitation</button>
+            </div>
+            <br/>
+            <div >
+               
+
+                <!-- Single button -->
+                <div class="btn-group" dropdown>
+                    <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
+                        {{dropdownText}} <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="choice in items">
+                            <a href ng-click="dropdownSelected(choice)">{{choice}}</a>
+                        </li>
+                    </ul>
+                </div>
+
+             
+               
+             </div>   
+
+        </form>
+    </div>
+
+
 </body>
 
 <script src="Scripts/angular.js"></script>
 <script src="Scripts/angular.min.js"></script>
 <script src="Scripts/App.js"></script>
+<script src="Scripts/angular-ui/ui-bootstrap.js"></script>
 </html>
