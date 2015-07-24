@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="style.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+</head>
+<body>
+    <h1> Hallo World !!! </h1>
+
+    <h3> Static </h3>
+
+    <svg width="300" height="300" style="background-color: lightblue">
+        <g transform="translate(0, 250)">
+            <rect width="20" height="50" style="fill: #00bfff"></rect>
+            <text x="5" y="25" dy=".35em" style="color:red">4</text>
+        </g>
+    </svg>
+
+    <h3> Dinamic </h3>
+    <svg class="chart" width="300" height="300" style="background-color: lightgreen" />
+
+    <h3> Heatmap</h3>
+    <svg class="heatmap" style="background-color: lightblue" />
+   
+    <h3> Circles </h3>
+    <svg class="myCircle" style="background-color: lightblue" />
+
+    <h4> Canvas Circles</h4>
+    <canvas id="myCanvas" width="100" height="100" style="background-color:lightblue"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        var centerX = canvas.width / 2;
+        var centerY = canvas.height / 2;
+        var radius = 50;
+
+        context.beginPath();
+        context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        context.fillStyle = 'purple';
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = 'purple';
+        context.stroke();
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="app.js"></script>
+</body>
+</html>
