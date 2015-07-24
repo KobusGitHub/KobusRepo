@@ -107,15 +107,15 @@ blocksGroup.append("text")
 
 
 var circleData = [
-{ circleText: "B1", XIndex: 0, YIndex: 0 },
-{ circleText: "B2", XIndex: 1, YIndex: 0 },
-{ circleText: "B2", XIndex: 2, YIndex: 0 },
-{ circleText: "B3", XIndex: 0, YIndex: 1 },
-{ circleText: "B4", XIndex: 1, YIndex: 1 },
-{ circleText: "B4", XIndex: 2, YIndex: 1 },
-{ circleText: "B3", XIndex: 0, YIndex: 2 },
-{ circleText: "B4", XIndex: 1, YIndex: 2 },
-{ circleText: "B4", XIndex: 2, YIndex: 2 },
+{ circleText: "C1", XIndex: 0, YIndex: 0 },
+{ circleText: "C2", XIndex: 1, YIndex: 0 },
+{ circleText: "C2", XIndex: 2, YIndex: 0 },
+{ circleText: "C3", XIndex: 0, YIndex: 1 },
+{ circleText: "C4", XIndex: 1, YIndex: 1 },
+{ circleText: "C4", XIndex: 2, YIndex: 1 },
+{ circleText: "C3", XIndex: 0, YIndex: 2 },
+{ circleText: "C4", XIndex: 1, YIndex: 2 },
+{ circleText: "C4", XIndex: 2, YIndex: 2 },
 ];
 
 
