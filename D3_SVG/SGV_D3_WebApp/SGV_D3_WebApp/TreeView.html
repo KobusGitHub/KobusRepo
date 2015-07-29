@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="fuelux">
+<head>
+    <meta charset="utf-8">
+    <title>Fuel UX Test</title>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://www.fuelcdn.com/fuelux/3.7.3/css/fuelux.min.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="http://www.fuelcdn.com/fuelux/3.7.3/js/fuelux.min.js"></script>
+
+
+    <ul id="myTree" class="tree tree-folder-select" role="tree" id="myTree">
+        <li class="tree-branch hide" data-template="treebranch" role="treeitem" aria-expanded="false">
+            <div class="tree-branch-header">
+                <button class="glyphicon icon-caret glyphicon-play"><span class="sr-only">Open</span></button>
+                <button class="tree-branch-name">
+                    <span class="glyphicon icon-folder glyphicon-folder-close"></span>
+                    <span class="tree-label"></span>
+                </button>
+            </div>
+            <ul class="tree-branch-children" role="group"></ul>
+            <div class="tree-loader" role="alert">Loading...</div>
+        </li>
+        <li class="tree-item hide" data-template="treeitem" role="treeitem">
+            <button class="tree-item-name">
+                <span class="glyphicon icon-item fueluxicon-bullet"></span>
+                <span class="tree-label"></span>
+            </button>
+        </li>
+    </ul>
+
+
+
+    
+    <script>
+        function staticDataSource(openedParentData, callback) {
+
+            if (openedParentData != undefined && openedParentData.name == "Drawing Hands")
+            {
+
+                l2ChildNodesArray = [
+                    { "name": "A", "type": "folder" },
+                    { "name": "S", "type": "item" },
+                    { "name": "D", "type": "folder" },
+                    { "name": "w", "type": "item" },
+                    { "name": "B", "type": "folder" },
+                    { "name": "R", "type": "item" },
+                    { "name": "H", "type": "folder" },
+                    { "name": "C", "type": "item" }
+                ];
+
+                callback({
+                    data: l2ChildNodesArray
+                });
+                return;
+            }
+
+           
+
+
+
+            childNodesArray = [
+              { "name": "Ascending and Descending", "type": "folder" },
+              { "name": "Sky and Water I", "type": "item" },
+              { "name": "Drawing Hands", "type": "folder" },
+              { "name": "waterfall", "type": "item" },
+              { "name": "Belvedere", "type": "folder" },
+              { "name": "Relativity", "type": "item" },
+              { "name": "House of Stairs", "type": "folder" },
+              { "name": "Convex and Concave", "type": "item" }
+            ];
+
+            callback({
+                data: childNodesArray
+            });
+        }
+
+        $(function () {
+            $('#myTree').tree({
+                dataSource: staticDataSource,
+                multiSelect: false,
+                folderSelect: true
+            });
+        });
+
+
+        //function dynamicDataSource(openedParentData, callback) {
+        //    var childNodesArray = [];
+
+        //    // call API, posting options
+        //    $.ajax({
+        //        'type': 'post',
+        //        'url': '/tree/data',
+        //        'data': openedParentData  // first call with be an empty object
+        //    })
+        //    .done(function (data) {
+        //        // configure datasource
+        //        var childObjectsArray = data;
+
+        //        // pass an array with the key 'data' back to the tree
+        //        // [ {'name': [string], 'type': [string], 'attr': [object] } ]
+        //        callback({
+        //            data: childNodesArray
+        //        });
+
+        //    });
+        //}
+
+
+        //function staticDataSource(parentData, callback) {
+        //    // includes rebeccapurple styling
+
+        //    childNodesArray = [
+        //      {
+        //          "name": "Ascending and Descending",
+        //          "type": "folder",
+        //          "attr": {
+        //              "id": "ascending-and-descending"
+        //          }
+        //      },
+        //      {
+        //          "name": "Sky and Water I",
+        //          "type": "item",
+        //          "attr": {
+        //              "id": "sky-and-water-i",
+        //              "data-icon": "glyphicon glyphicon-file",
+        //              "style": "color: rebeccapurple;"
+        //          }
+        //      },
+        //      {
+        //          "name": "Drawing Hands",
+        //          "type": "folder",
+        //          "attr": {
+        //              "id": "drawing-hands"
+        //          }
+        //      },
+        //      {
+        //          "name": "Waterfall",
+        //          "type": "item",
+        //          "attr": {
+        //              "id": "waterfall",
+        //              "data-icon": "glyphicon glyphicon-cloud",
+        //              "style": "color: rebeccapurple;"
+        //          }
+        //      },
+        //      {
+        //          "name": "Belvedere",
+        //          "type": "folder",
+        //          "attr": {
+        //              "id": "belvedere"
+        //          }
+        //      },
+        //      {
+        //          "name": "Relativity",
+        //          "type": "item",
+        //          "attr": {
+        //              "id": "relativity",
+        //              "data-icon": "glyphicon glyphicon-picture",
+        //              "style": "color: rebeccapurple;"
+        //          }
+        //      },
+        //      {
+        //          "name": "House of Stairs",
+        //          "type": "folder",
+        //          "attr": {
+        //              "id": "house-of-stairs"
+        //          }
+        //      },
+        //      {
+        //          "name": "Convex and Concave",
+        //          "type": "item",
+        //          "attr": {
+        //              "id": "convex-and-concave",
+        //              "data-icon": "glyphicon glyphicon-tags",
+        //              "style": "color: rebeccapurple;"
+        //          }
+        //      }
+        //    ];
+
+        //    callback({
+        //        data: childNodesArray
+        //    });
+        //}
+
+
+        $('#myTree').on('deselected.fu.tree selected.fu.tree', function (event) {
+            // insert JSON text of selected items after tree
+            $('#myTree').after('SELECTED ITEMS: ' + JSON.stringify($('#myTree').tree('selectedItems')) + '<br>');
+        });
+
+        $('#myTree').on('disclosedFolder.fu.tree closed.fu.tree', function (event, parentData) {
+            // insert JSON text of selected items after tree
+            $('#myTree').after('OPENED/CLOSED FOLDER DATA: ' + JSON.stringify(parentData) + ' ');
+        });
+
+
+
+
+    </script>
+
+   
+
+    </body>
+</html>
