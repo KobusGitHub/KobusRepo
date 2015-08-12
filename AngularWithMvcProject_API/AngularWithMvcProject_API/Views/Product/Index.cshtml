@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+
+<h2>Index</h2>
+<div>
+    <ul class="menu">
+        <li><a href="#/list">List</a></li>
+       
+    </ul>
+</div>
+<div ng-app="ProductApp">
+    <div ng-view></div>
+
+</div>
+
+
+
+
+@section Scripts{
+    <script src="https://code.angularjs.org/1.4.0-rc.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.0-rc.2/angular-route.min.js"></script>
+    <script src="~/Scripts/ProductListAngular.js"></script>
+}
